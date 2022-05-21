@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Routes, Route, Link } from "react-router-dom";
+import NavBar from "./components/navbar/NavBar";
+import FavList from "./components/favList/FavList";
+import Home from "./components/home/Home";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
 
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <NavBar />
+      <h1>Welcome to Movie  websit</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/favlist" element={<FavList />} />
+      </Routes>
+
+
+    </>
   );
 }
 
